@@ -1,0 +1,3 @@
+Nombre de réclamations valides traitées : 0
+Nombre de réclamations rejetées : 0
+Nombre de soins déclarés pour chaque type de soin :

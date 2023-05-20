@@ -1,0 +1,463 @@
+|1. Exigences Fonctionnalités à testerIdentifiants des fonctionnalitésDescription des fonctionnalitésEF - 001|
+|:----|
+|Ajouter les remboursements pour chaque type de soin et contratEF - 002|
+|Implémenter les manipulations monétaires|
+|EF - 003|
+|Implémenter le maximum mensuel|
+|EF - 004|
+|Faire des validations sur les données d’entrée et des messages d’erreurs spécifiques|
+|EF - 005|
+|Traiter les propriétés JSON manquantes dans le fichier d’entrée|
+|EF - 006|
+|Implémenter la liste de statistiques|
+|EF - 007|
+|Tolérer les ‘|’ et les ‘.’ dans le fichier d’entrée pour les montants|
+|EF - 008|
+|Ajouter une propriété “total” dans le remboursement|
+|2. Suites et cas de testsIdentifiants des fonctionnalitésIdentifiants des suites de tests|
+|Description des suites de testsNombre de cas de tests|
+|EF - 001|
+|ST - 001|
+|Tester tous les soins et contrats pour les remboursements|
+|50|
+|EF - 002|
+|ST - 002|
+|Tester que les manipulations monétaires sont fonctionnelles|
+|3|
+|EF - 003|
+|ST - 003|
+|Tester que le maximum mensuel fonctionne|
+|5|
+|EF - 004|
+|ST - 004|
+|Tester l’application des validations et voir si les messages d’erreurs correspondant s’affichent|
+|7|
+|EF - 005|
+|ST - 005|
+|Tester qu’un message d’erreur s’affiche lorsqu’une propriété est manquante7|
+|EF - 006|
+|ST - 006|
+|Tester la création de la liste des statistiques avec les bonnes valeurs|
+|5|
+|EF - 007|
+|ST - 007|
+|Tester les ‘.’ et ‘|’3|
+|EF - 008|
+|ST - 008|
+|Tester la propriété total|
+|2|
+|3.Cas de tests|
+|Identifiant des suites de testsIdentifiant des cas de tests|
+|Description des cas de tes|
+|Préconditions|
+|Sortie attendue|
+|Priorité|
+|ST - 001|
+|CT-001|
+|Ajouter une réclamation avec un contrat A et numéro de soin 0|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=0|
+|Le remboursement calculé est de 25%|
+|Haute|
+|CT-002|
+|Ajouter une réclamation avec un contrat A et numéro de soin 100|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=100|
+|Le remboursement calculé est de 35%|
+|Haute|
+|CT-003|
+|Ajouter une réclamation avec un contrat A et numéro de soin 150|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=150|
+|Le remboursement calculé est de 0%|
+|Haute|
+|CT-004|
+|Ajouter une réclamation avec un contrat A et numéro de soin 175|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=175|
+|Le remboursement calculé est de 50%|
+|Haute|
+|CT-005|
+|Ajouter une réclamation avec un contrat A et numéro de soin 200|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=200|
+|Le remboursement calculé est de 25%|
+|Haute|
+|CT-006|
+|Ajouter une réclamation avec un contrat A et numéro de soin 300|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=300|
+|Le remboursement calculé est de 0%|
+|Haute|
+|CT-007|
+|Ajouter une réclamation avec un contrat A et numéro de soin 400|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=400|
+|Le remboursement calculé est de 0%|
+|Haute|
+|CT-008|
+|Ajouter une réclamation avec un contrat A et numéro de soin 500|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=500|
+|Le remboursement calculé est de 25%|
+|Haute|
+|CT-009|
+|Ajouter une réclamation avec un contrat A et numéro de soin 600|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=600|
+|Le remboursement calculé est de 40%|
+|Haute|
+|CT-010|
+|Ajouter une réclamation avec un contrat A et numéro de soin 700|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=700|
+|Le remboursement calculé est de 0%|
+|Haute|
+|CT-013|
+|Ajouter une réclamation avec un contrat B et numéro de soin 150|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=150|
+|Le remboursement calculé est de 0%|
+|Haute|
+|CT-014|
+|Ajouter une réclamation avec un contrat B et numéro de soin 175|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=175|
+|Le remboursement calculé est de 75%|
+|Haute|
+|CT-015|
+|Ajouter une réclamation avec un contrat B et numéro de soin 200|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=200|
+|Le remboursement calculé est de 100%Haute|
+|CT-016|
+|Ajouter une réclamation avec un contrat B et numéro de soin 300|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=300|
+|Le remboursement calculé est de 50%|
+|Haute|
+|CT-017|
+|Ajouter une réclamation avec un contrat B et numéro de soin 400|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=400|
+|Le remboursement calculé est de 0%|
+|Haute|
+|CT-018|
+|Ajouter une réclamation avec un contrat B et numéro de soin 500|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=500|
+|Le remboursement calculé est de 50% et si le montant est >= 100$ alors le remboursement =50$|
+|Haute|
+|CT-019|
+|Ajouter une réclamation avec un contrat B et numéro de soin 600|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=600|
+|Le remboursement calculé est de 100%|
+|Haute|
+|CT-020|
+|Ajouter une réclamation avec un contrat B et numéro de soin 700|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=700|
+|Le remboursement calculé est de 70%|
+|Haute|
+|CT-021|
+|Ajouter une réclamation avec un contrat C et numéro de soin 0|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=0|
+|Le remboursement calculé est de 90%|
+|Haute|
+|CT-022|
+|Ajouter une réclamation avec un contrat C et numéro de soin 100|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=100|
+|Le remboursement calculé est de 95%|
+|Haute|
+|CT-023|
+|Ajouter une réclamation avec un contrat C et numéro de soin 150|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=150|
+|Le remboursement calculé est de 85%|
+|Haute|
+|CT-024|
+|Ajouter une réclamation avec un contrat C et numéro de soin 175|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=175|
+|Le remboursement calculé est de 90%|
+|Haute|
+|CT-025|
+|Ajouter une réclamation avec un contrat C et numéro de soin 200|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=200|
+|Le remboursement calculé est de 90%|
+|Haute|
+|CT-026|
+|Ajouter une réclamation avec un contrat C et numéro de soin 300|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=300|
+|Le remboursement calculé est de 90%|
+|Haute|
+|CT-027|
+|Ajouter une réclamation avec un contrat C et numéro de soin 400|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=400|
+|Le remboursement calculé est de 90%|
+|Haute|
+|CT-028|
+|Ajouter une réclamation avec un contrat C et numéro de soin 500|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=500|
+|Le remboursement calculé est de 90%|
+|Haute|
+|CT-029|
+|Ajouter une réclamation avec un contrat C et numéro de soin 600|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=600|
+|Le remboursement calculé est de 75%|
+|Haute|
+|CT-030|
+|Ajouter une réclamation avec un contrat C et numéro de soin 700|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=700|
+|Le remboursement calculé est de 90%|
+|Haute|
+|CT-031|
+|Ajouter une réclamation avec un contrat D et numéro de soin 0|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=0|
+|Le remboursement calculé est de 100% et si le montant est >= 85$ alors le remboursement =85$|
+|CT-032|
+|Ajouter une réclamation avec un contrat D et numéro de soin 100|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=100|
+|Le remboursement calculé est de 100% et si le montant est >= 75$ alors le remboursement =75$|
+|Haute|
+|CT-033|
+|Ajouter une réclamation avec un contrat D et numéro de soin 150|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=150|
+|Le remboursement calculé est de 100% et si le montant est >= 150$ alors le remboursement =150$|
+|Haute|
+|CT-034|
+|Ajouter une réclamation avec un contrat D et numéro de soin 175|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=175|
+|Le remboursement calculé est de 95%|
+|Haute|
+|CT-035|
+|Ajouter une réclamation avec un contrat D et numéro de soin 200|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=200|
+|Le remboursement calculé est de 100% et si le montant est >= 100$ alors le remboursement =100$|
+|Haute|
+|CT-036|
+|Ajouter une réclamation avec un contrat D et numéro de soin 300|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=300|
+|Le remboursement calculé est de 100%Haute|
+|CT-037|
+|Ajouter une réclamation avec un contrat D et numéro de soin 400|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=400|
+|Le remboursement calculé est de 100% et si le montant est >= 65$ alors le remboursement =65$|
+|Haute|
+|CT-038|
+|Ajouter une réclamation avec un contrat D et numéro de soin 500|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=500|
+|Le remboursement calculé est de 100% et si le montant est >= 75$ alors le remboursement =75$|
+|Haute|
+|CT-039|
+|Ajouter une réclamation avec un contrat D et numéro de soin 600|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=600|
+|Le remboursement calculé est de 100% et si le montant est >= 100$ alors le remboursement =100$|
+|Haute|
+|CT-040|
+|Ajouter une réclamation avec un contrat D et numéro de soin 700|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=700|
+|Le remboursement calculé est de 100% et si le montant est >= 90$ alors le remboursement =90$|
+|Haute|
+|CT-041|
+|Ajouter une réclamation avec un contrat E et numéro de soin 0|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=0|
+|Le remboursement calculé est de 15%|
+|Haute|
+|CT-042|
+|Ajouter une réclamation avec un contrat E et numéro de soin 100|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=100|
+|Le remboursement calculé est de 25%|
+|Haute|
+|CT-043|
+|Ajouter une réclamation avec un contrat E et numéro de soin 150|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=150|
+|Le remboursement calculé est de 15%|
+|Haute|
+|CT-044|
+|Ajouter une réclamation avec un contrat E et numéro de soin 175|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=175|
+|Le remboursement calculé est de 25% et si le montant est >= 80$ alors le remboursement =20$|
+|Haute|
+|CT-045|
+|Ajouter une réclamation avec un contrat E et numéro de soin 200|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=200|
+|Le remboursement calculé est de 12%|
+|Haute|
+|CT-046|
+|Ajouter une réclamation avec un contrat E et numéro de soin 300|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=300|
+|Le remboursement calculé est de 60%|
+|Haute|
+|CT-0047|
+|Ajouter une réclamation avec un contrat  E et numéro de soin 400|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=400|
+|Le remboursement calculé est de 25% et si le montant est >= 60$ alors le remboursement =15$|
+|CT-048|
+|Ajouter une réclamation avec un contrat E et numéro de soin 500|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=500|
+|Le remboursement calculé est de 30% et si le montant est >= 67$ alors le remboursement =20$|
+|Haute|
+|CT-049|
+|Ajouter une réclamation avec un contrat E et numéro de soin 600|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=600|
+|Le remboursement calculé est de 15%|
+|CT-050|
+|Ajouter une réclamation avec un contrat E et numéro de soin 700|
+|Le fichier JSON comporte un numéro de dossier contenant A et un numéro de soin=700|
+|Le remboursement calculé est de 22%|
+|Haute|
+|ST-002|
+|CT-05151 52 5351 52 5351 52 53Haute|
+|CT-052|
+|Haute|
+|CT-53|
+|Haute|
+|ST-003|
+|CT-054|
+|Ajouter une réclamation avec un numéro de soin 100|
+|Le fichier d’entrée JSON comportele soin 100 plusieurs fois pour un total >250$|
+|Le remboursement affiche 250$/ nombre de soin 100|
+|Haute|
+|CT-055|
+|Ajouter une réclamation avec un numéro de soin 175|
+|le soin 175 plusieurs fois pour un total <=200$|
+|Le remboursement affiche 200$/ nombre de soin 175|
+|Haute|
+|CT-056|
+|Ajouter une réclamation avec un numéro de soin 200|
+|Le fichier d’entrée JSON comportele soin 200 plusieurs fois pour un total >250$|
+|Le remboursement affiche 250$/ nombre de soin 200|
+|Haute|
+|CT-057|
+|Ajouter une réclamation avec un numéro de soin 500|
+|Le fichier d’entrée JSON comportele soin 500 plusieurs fois pour un total >150$|
+|Le remboursement affiche 150$/ nombre de soin 500Haute|
+|CT-058|
+|Ajouter une réclamation avec un numéro de soin 600|
+|Le fichier d’entrée JSON comportele soin 600 plusieurs fois pour un total >300$|
+|Le remboursement affiche 300$/ nombre de soin 600|
+|Haute|
+|ST-004|
+|CT-059|
+|ajouter une réclamation avec un numéro de soin != (0|100|150| |
+|175|200.|
+|>=300| |
+|<=400|500| |
+|600|700)|
+|Le fichier d’entrée JSON comporte un soin avec un numéro !=0|100|150| |
+|175|200.|
+|>=300| |
+|<=400|500| |
+|600|700|
+|Erreur: ”Numéro de soin invalide”|
+|Haute|
+|CT-060|
+|ajouter une réclamation avec un numéro de soin == (0|100|150| |
+|175|200.|
+|>=300| |
+|<=400|500| |
+|600|700)|
+|Le fichier d’entrée JSON comporte un soin avec un numéro ==0|100|150| |
+|175|200.|
+|>=300| |
+|<=400|500| |
+|600|700|
+|”Numéro de soin valide”|
+|Haute|
+|CT-061|
+|ajouter une réclamation avec un numéro de dossier ne contenant pas A|B|C|D ou E suivi de 6 chiffres|
+|Le fichier d’entrée JSON comporte un numéro de dossier ne contenant pas A|B|C|D ou E suivi de 6 chiffres|
+|Erreur: ”Numéro de dossier invalide”|
+|Haute|
+|CT-062|
+|ajouter une réclamation avec un numéro de dossier == A|B|C|D ou E suivi de 6 chiffres|
+|Le fichier d’entrée JSON comporte un numéro de dossier == A|B|C|D ou E suivi de 6 chiffres|
+|”Numéro de dossier valide”|
+|Haute|
+|CT-063|
+|ajouter une réclamation sans signe dollar après un montant|
+|Le fichier d’entrée JSON ne comporte pas de signe dollar après 1 ou plusieurs montants|
+|Erreur :”Signe dollar manquant”|
+|Haute|
+|CT-064|
+|ajouter une réclamation avec le champ mois ne respectant pas AAAA-MM|
+|Le fichier d’entrée JSON ne comporte pas le format AAAA-MM dans le champs mois|
+|Erreur: “format invalide”|
+|Haute|
+|CT-065|
+|ajouter une réclamation avec des dates ayant un mois différent du champs mois|
+|Le fichier d’entrée JSON comporte des dates ayant un mois différents du champs mois|
+|Erreur: “Dates invalides”|
+|Haute|
+|ST-005|
+|CT-066|
+|Ajouter une réclamationsans la clé “dossier”|
+|Le fichier d’entrée JSON ne comporte|
+|pas la clé “dossier”|
+|Erreur “la propriété  “dossier”  est manquante”|
+|Haute|
+|CT-067|
+|Ajouter une réclamationsans la clé “mois”Le fichier d’entrée JSON ne comporte|
+|pas la clé“mois”Erreur “la propriété  “mois”    est manquante”|
+|Haute|
+|CT-068|
+|Ajouter une réclamationsans la clé “remboursement”|
+|Le fichier d’entrée JSON ne comporte|
+|pas la clé “remboursement”|
+|Erreur “la propriété “remboursement”   est manquante”|
+|Haute|
+|CT-069|
+|Ajouter une réclamationsans la clé “soin”|
+|Le fichier d’entrée JSON ne comporte|
+|pas la clé “soin”|
+|Erreur “la propriété  “soin”  est manquante”|
+|Haute|
+|CT-070|
+|Ajouter une réclamationsans la clé “date”|
+|Le fichier d’entrée JSON ne comporte|
+|pas la clé “date”|
+|Erreur “la propriété  “date”  est manquante”|
+|Haute|
+|CT-071|
+|Ajouter une réclamationsans la clé “montant”|
+|Le fichier d’entrée JSON ne comportepas la clé “montant”|
+|Erreur “la propriété  “montant”  est manquante”|
+|Haute|
+|CT-072|
+|Ajouter une réclamationsans la clé “total”|
+|Le fichier d’entrée JSON ne comporte|
+|pas la clé “total”|
+|Erreur “la propriété “total”   est manquante”|
+|Haute|
+|ST-006|
+|CT-073|
+|Entrer la commande dans le terminal “java -jar Refund.jar input.json output.json -S|
+|La commande comporte -S|
+|“Liste de statistiques produite avec succès”|
+|Haute|
+|CT-074|
+|Entrer la commande dans le terminal “java -jar Refund.jar input.json output.json -SR|
+|La commande comporte -SR|
+|“Liste de statistiques réinitialisée avec succès” et les compteurs dans la liste sont remis à 0|
+|Haute|
+|CT-075|
+|Entrer la commande dans le terminal “java -jar Refund.jar input.json output.json -<autre que S ou SR>|
+|La commande comporte autre chose que -S ou -SR|
+|Erreur: commande invalide|
+|Haute|
+|CT-076|
+|Entrer la commande dans le terminal “java -jar Refund.jar input.json output.json -S” et avoir des soins dans la réclamation|
+|La commande comporte -S et Le fichier d’entrée JSON comporte des soins et aucun erreur|
+|“Liste de statistiques produite avec succès” et compteur de réclamation valide s’incrémente de 1 et compteur pour les types de soins entrés s'incrémentent de 1|
+|Haute|
+|CT-077|
+|Entrer la commande dans le terminal “java -jar Refund.jar input.json output.json -S” et avoir une erreur dans la réclamation|
+|La commande comporte -S et Le fichier d’entrée JSON comporte une erreur|
+|“Liste de statistiques produite avec succès” et compteur de réclamation invalide s’incrémente de 1Haute|
+|ST-007|
+|CT-078|
+|Ajouter une réclamation avec des ‘|’ pour séparer entier et décimales dans les montants|
+|Le fichier d’entrée JSON comporte des ‘|’Le logiciel fonctionne normalement|
+|Haute|
+|CT-079|
+|Ajouter une réclamation avec des ‘.’ pour séparer entier et décimales dans les montants|
+|Le fichier d’entrée JSON comporte des ‘.’Le logiciel fonctionne normalement|
+|Haute|
+|CT-080|
+|Ajouter une réclamation avec autre que des ‘|’ ou des ‘.’ pour séparer entier et décimales dans les montants|
+|Le fichier d’entrée JSON comporte une autre séparation que des ‘|’ ou des ‘.’ pour séparer les montants|
+|Erreurs: “Les montants ne contiennent pas de ‘|’ ou de ‘.’ ”|
+|Haute|
+|ST-008|
+|CT-081|
+|Ajouter une réclamation avec plusieurs montants|
+|Le fichier d’entrée JSON comporte au moins 2 montants|
+|La propriété totale s’affiche avec la somme des montants de remboursements|
+|Haute|
+|CT-082|
+|Ajouter une réclamation avec 1 seul montant|
+|Le fichier d’entrée JSON comporte 1 seul montant|
+|La propriété totale s’affiche avec la valeur de remboursement du montant|
+|Haute|
