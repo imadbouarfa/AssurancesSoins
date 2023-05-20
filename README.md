@@ -7,7 +7,7 @@ Le projet est un logiciel qui calcul les remboursement de soins donnés à parti
 
 - [@Lounas, Nazim](https://gitlab.info.uqam.ca/lounas.nazim)
 - [@Hameg, Idir](https://gitlab.info.uqam.ca/hameg.idir)
-- [@Bouarfa, Imad](https://gitlab.info.uqam.ca/bouarfa.imad)
+- [@Shaker, Imad](https://gitlab.info.uqam.ca/bouarfa.imad)
 - [@Fortin, Xavier](https://gitlab.info.uqam.ca/fortin.xavier)
 
 
@@ -27,7 +27,8 @@ Le projet est un logiciel qui calcul les remboursement de soins donnés à parti
 ## Utilisation
 * Ouvrir le projet sur IntelliJ
 * Ouvrir le terminal 
-* Entrer la commande ' java -jar <nom du fichier d'entrée> <choisir un nom pour le fichier de sortie> -S ou -SR
+* Entrer la commande 'java -jar <nom du fichier d'entrée> <choisir un nom pour le fichier de sortie> -S ou -SR' ou aller dans Edit Configurations de votre IDE et rentrer 'input output -SR' ou 'input output -S'
+
 
 ## Répartition des taches
 #### Nazim (Scrum master)
