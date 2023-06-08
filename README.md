@@ -1,4 +1,4 @@
-# Description du project
+# Description du projet
 
 Le projet est un logiciel qui calcul les remboursement de soins donnés à partir d'un fichier JSON et qui imprime un nouveau fichier avec les montants des remboursements.        
 Lien original du projet: https://gitlab.info.uqam.ca/lounas.nazim/inf2050-hiver2023-projet-equipe23
