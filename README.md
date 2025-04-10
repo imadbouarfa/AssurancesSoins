@@ -7,7 +7,7 @@ Lien original du projet: https://gitlab.info.uqam.ca/lounas.nazim/inf2050-hiver2
 
 - [@Lounas, Nazim](https://gitlab.info.uqam.ca/lounas.nazim)
 - [@Hameg, Idir](https://gitlab.info.uqam.ca/hameg.idir)
-- [@Shaker, Imad](https://gitlab.info.uqam.ca/bouarfa.imad)
+- [@Bouarfa, Imad](https://gitlab.info.uqam.ca/bouarfa.imad)
 - [@Fortin, Xavier](https://gitlab.info.uqam.ca/fortin.xavier)
 
 
